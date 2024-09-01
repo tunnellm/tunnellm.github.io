@@ -13,11 +13,11 @@ redirect_from:
 
 I am a second-year Computer Science PhD student at Purdue University, West Lafayette, where I am part of the Computational Science and Engineering research group. My research primarily focuses on the development of novel preconditioners for symmetric positive definite systems, with the goal of narrowing the gap between theoretical advancements and their practical applications in scientific computing.
 
-I am particularly interested in creating methods optimized for modern high-performance computing environments, including GPU accelerations and many-core systems, to achieve faster and more efficient solutions to complex computation prolems.
+I am particularly interested in creating methods optimized for modern high-performance computing environments, including GPU accelerations and many-core systems, to achieve faster and more efficient solutions to complex computation problems.
 
 ### Current Research Intersts
 
-* **Novel Preconditioners for Symmetric Positive Definite Systems** Designing advanced preconditioning techniques that lead to real improvements in computational costs.
+* **Novel Preconditioners for Symmetric Positive Definite Systems** Designing novel preconditioners that lead to real improvements in computational costs.
 * **High-Performance Computing:** Utilizing CUDA and other parallel computing frameworks in implementation of numerical algorithms.
 * **Scalable Algorithms:** Developing robust and scalable algorithms for large-scale scientific computations.
 
