@@ -48,4 +48,14 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             fileName: "CV.pdf"
         }
     }, viewerConfig);
+
+    adobeDCView.registerCallback(
+        AdobeDC.View.Enum.CallbackType.DOCUMENT_LOADED,
+        function() {
+          // PDF is fully loaded, now display the viewer
+          document.getElementById('adobe-dc-view').style.display = 'block';
+        },
+        {}
+    );
+
 });
