@@ -1,0 +1,32 @@
+/* Make the table container responsive */
+#performance-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+/* Ensure the table fits inside a scrollable container on small screens */
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Style table headers and cells for better spacing */
+#performance-table th, #performance-table td {
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Improve pagination button spacing for mobile */
+#pagination button {
+    padding: 10px;
+    font-size: 14px;
+    margin: 2px;
+}
+
+/* Improve input box usability on mobile */
+#rows-per-page {
+    width: 65px;
+    font-size: 16px;
+}

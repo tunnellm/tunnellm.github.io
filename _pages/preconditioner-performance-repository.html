@@ -1,0 +1,45 @@
+---
+layout: archive
+title: "Performance Repository"
+permalink: /preconditioner-performance-repository/
+author_profile: true
+---
+
+{% include base_path %}
+
+<link rel="stylesheet" href="/assets/css/performance.css">
+
+<!-- <h1 style="font-size: 2em; text-align: center;">Preconditioner Performance Repository</h1> -->
+
+<!-- Filter Dropdown -->
+<select id="category-filter">
+    <option value="">All Categories</option>
+</select>
+
+<label for="rows-per-page">Rows per page:</label>
+<input type="number" id="rows-per-page" value="10" min="1" style="width: 65px; font-size: 16px;">
+
+<p>Click a column header to sort.</p>
+<div class="table-wrapper">
+    <table id="performance-table" border="1">
+    <thead>
+        <tr>
+            <th class="sortable" data-sort="problem">Problem <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="metric1">Metric 1 <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="metric2">Metric 2 <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="category">Category <span class="sort-arrow"></span></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    </table>
+</div>
+<div id="pagination"></div>
+
+<!-- Details Section -->
+<!-- <div id="details">Click on a problem to see details.</div> -->
+<div id="details">
+    <img id="details-image" src="https://placehold.co/600x400" alt="Problem Details" style="display: none; max-width: 100%;">
+</div>
+
+<!-- Include the JS script -->
+<script src="/assets/js/table.js"></script>

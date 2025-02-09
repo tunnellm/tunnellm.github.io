@@ -1,0 +1,12 @@
+[
+    { "problem": "Test Problem B", "metric1": 0.67, "metric2": 2.45, "category": "PDE Misc.", "details": "Details about B", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem A", "metric1": 0.85, "metric2": 1.23, "category": "Structural", "details": "Details about A", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem C", "metric1": 1.23, "metric2": 0.98, "category": "Computer Vision", "details": "Details about C", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem D", "metric1": 0.45, "metric2": 1.67, "category": "Optimization", "details": "Details about D", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem E", "metric1": 0.98, "metric2": 1.23, "category": "PDE Misc.", "details": "Details about E", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem F", "metric1": 1.23, "metric2": 0.67, "category": "Computer Vision", "details": "Details about F", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem G", "metric1": 1.67, "metric2": 0.45, "category": "Optimization", "details": "Details about G", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem H", "metric1": 1.23, "metric2": 0.98, "category": "Structural", "details": "Details about H", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem I", "metric1": 0.67, "metric2": 2.45, "category": "PDE Misc.", "details": "Details about I", "image": "https://placehold.co/600x400" },
+    { "problem": "Test Problem J", "metric1": 0.85, "metric2": 1.23, "category": "Computer Vision", "details": "Details about J", "image": "https://placehold.co/600x400" }
+]
