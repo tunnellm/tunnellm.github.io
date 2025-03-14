@@ -5,7 +5,7 @@ authors: "Marc Tunnell, Zachary DeBruine, Erin Carrier"
 category: journal
 venue: TMLR
 status: "Accepted"
-date: 2023-09-01
+date: 2025-03-14
 ---
 
 This paper proposes a method for rank suggestion in non-negative matrix factorization through sensitivity analysis, accepted for publication.
