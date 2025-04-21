@@ -106,39 +106,44 @@
 #filter-container {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.5s ease-out;
 }
 
-/* #toggle-filters {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    padding: 5px 10px;
-    height: 32px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-#toggle-filters:hover {
-    background-color: #f0f0f0;
-} */
 
 #toggle-filters {
     background-color: white;
     color: black;
     border: 1px solid #ccc;
-    padding: 0px 0px;
-    height: 29px; /* Match input height */
+    padding: 2px 2px;
+    height: 30px; /* Match input height */
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 10px;
     /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); Match dropdown and input */
-    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1)
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.09)
 }
 
 #toggle-filters:hover {
     background-color: #f0f0f0;
+}
+
+/* --- inline‑details drawer --- */
+.details-row td {                /* full‑width cell */
+    padding: 0;
+    border: none;
+    background: #fafafa;
+}
+
+.details-wrapper {               /* animated container */
+    overflow: hidden;
+    max-height: 0;               /* collapsed */
+    transition: max-height 0.5s ease-in-out;
+}
+
+.details-wrapper img {           /* image styling */
+    display: block;
+    max-width: 400px;            /* cap size */
+    width: 100%;
+    margin: 10px auto;
 }
