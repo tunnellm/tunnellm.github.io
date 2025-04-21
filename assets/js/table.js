@@ -208,33 +208,104 @@ document.addEventListener("DOMContentLoaded", function () {
                 renderPaginationControls(filteredData, totalPages);
             }
 
+            // 1) after you grab tableBody:
+            // const tableBody = document.querySelector("#performance-table tbody");
+
+            tableBody.addEventListener("click", e => {
+                const el = e.target;
+                if (!el.classList.contains("toggle-numeric")) return;
+                // swap between human-readable and full
+                const humanVal = el.dataset.human;
+                const fullVal  = el.dataset.full;
+                el.textContent = el.textContent === humanVal ? fullVal : humanVal;
+            });
+
+            // 2) drop‑in replacement for your old renderTable:
             function renderTable(filteredData) {
+                // enforce valid page
                 const totalPages = Math.ceil(filteredData.length / rowsPerPage);
-
-                // Ensure current page is within range
                 if (currentPage > totalPages) currentPage = totalPages;
-                if (currentPage < 1) currentPage = 1;
+                if (currentPage < 1)           currentPage = 1;
 
-                // Slice data to show only relevant rows for the current page
+                // slice out just this page
                 const start = (currentPage - 1) * rowsPerPage;
-                const end = start + rowsPerPage;
-                const paginatedData = filteredData.slice(start, end);
+                const end   = start + rowsPerPage;
+                const pageItems = filteredData.slice(start, end);
 
                 tableBody.innerHTML = "";
-                paginatedData.forEach(entry => {
-                    let row = document.createElement("tr");
-                    row.innerHTML = `
-                        <td><a href="#" class="problem-link" data-details="${entry.details}" data-image="${entry.image}">${entry.problem}</a></td>
-                        <td>${entry.nonzeros}</td>
-                        <td>${entry.avg_degree.toFixed(2)}</td>
-                        <td>${entry.rows}</td>
-                        <td>${entry.category}</td>
-                    `;
-                    tableBody.appendChild(row);
-                });
 
-                attachClickEventToProblems();
+                pageItems.forEach(entry => {
+                    const tr = document.createElement("tr");
+
+                    // problem link cell
+                    const tdProblem = document.createElement("td");
+                    const a = document.createElement("a");
+                    a.href = "#";
+                    a.className = "problem-link";
+                    a.dataset.details = entry.details;
+                    a.dataset.image   = entry.image;
+                    a.textContent     = entry.problem;
+                    tdProblem.appendChild(a);
+
+                    // nonzeros cell (toggle)
+                    const tdNZ = document.createElement("td");
+                    const spanNZ = document.createElement("span");
+                    spanNZ.className    = "toggle-numeric";
+                    spanNZ.dataset.full = entry.nonzeros;
+                    spanNZ.dataset.human= human(entry.nonzeros);
+                    spanNZ.textContent  = human(entry.nonzeros);
+                    tdNZ.appendChild(spanNZ);
+
+                    // avg_degree
+                    const tdDeg = document.createElement("td");
+                    tdDeg.textContent = entry.avg_degree.toFixed(2);
+
+                    // rows cell (toggle)
+                    const tdRows = document.createElement("td");
+                    const spanRows = document.createElement("span");
+                    spanRows.className    = "toggle-numeric";
+                    spanRows.dataset.full = entry.rows;
+                    spanRows.dataset.human= human(entry.rows);
+                    spanRows.textContent  = human(entry.rows);
+                    tdRows.appendChild(spanRows);
+
+                    // category
+                    const tdCat = document.createElement("td");
+                    tdCat.textContent = entry.category;
+
+                    // assemble
+                    tr.append(tdProblem, tdNZ, tdDeg, tdRows, tdCat);
+                    tableBody.appendChild(tr);
+                });
             }
+
+            // function renderTable(filteredData) {
+            //     const totalPages = Math.ceil(filteredData.length / rowsPerPage);
+
+            //     // Ensure current page is within range
+            //     if (currentPage > totalPages) currentPage = totalPages;
+            //     if (currentPage < 1) currentPage = 1;
+
+            //     // Slice data to show only relevant rows for the current page
+            //     const start = (currentPage - 1) * rowsPerPage;
+            //     const end = start + rowsPerPage;
+            //     const paginatedData = filteredData.slice(start, end);
+
+            //     tableBody.innerHTML = "";
+            //     paginatedData.forEach(entry => {
+            //         let row = document.createElement("tr");
+            //         row.innerHTML = `
+            //             <td><a href="#" class="problem-link" data-details="${entry.details}" data-image="${entry.image}">${entry.problem}</a></td>
+            //             <td>${entry.nonzeros}</td>
+            //             <td>${entry.avg_degree.toFixed(2)}</td>
+            //             <td>${entry.rows}</td>
+            //             <td>${entry.category}</td>
+            //         `;
+            //         tableBody.appendChild(row);
+            //     });
+
+            //     attachClickEventToProblems();
+            // }
             // function attachClickEventToProblems() {
             //     document.querySelectorAll(".problem-link").forEach(link => {
             //       link.addEventListener("click", event => {
