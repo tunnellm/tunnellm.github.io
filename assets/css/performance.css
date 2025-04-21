@@ -117,7 +117,8 @@
 #reset-filters, 
 #copy-permalink,
 #rows-per-page,
-#category-filter{
+#category-filter,
+#problem-search{
     background-color: white;
     color: black;
     border: 1px solid #ccc;
@@ -130,12 +131,26 @@
     box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.09)
 }
 
+#problem-search {
+    /* allow typing, but same look */
+    padding: 0 8px !important;
+    line-height: normal;
+}
+
 #toggle-filters:hover,
 #reset-filters:hover,
 #copy-permalink:hover,
 #rows-per-page:hover,
-#category-filter:hover {
+#category-filter:hover,
+#problem-search:hover {
     background-color: #f0f0f0;
+}
+
+#problem-search {
+    display: inline-block !important;
+    width: auto         !important;
+    max-width: 300px    !important; /* or whatever makes sense */
+    box-sizing: border-box;
 }
 
 /* --- inline‑details drawer --- */

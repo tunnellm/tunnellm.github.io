@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const copyBtn             = document.getElementById("copy-permalink");
   const copyFeedback        = document.getElementById("copy-feedback");
   const resetBtn            = document.getElementById("reset-filters");
+  const searchInput = document.getElementById("problem-search");
 
   const [ nzMinS, nzMaxS ]     = ["nonzero-range-min","nonzero-range-max"]
                                   .map(id=>document.getElementById(id));
@@ -92,26 +93,39 @@ document.addEventListener("DOMContentLoaded", () => {
         rowsD.textContent = `${human(e)} – ${human(f)}`;
       }
 
-      // filter + sort
       function getFilteredData() {
-        const a = clamp(fromExp(+nzMinS.value), nzMin, nzMax),
-              b = clamp(fromExp(+nzMaxS.value), nzMin, nzMax),
-              c = +degMinS.value, d = +degMaxS.value,
-              e = clamp(fromExp(+rowsMinS.value), rowsMin, rowsMax),
-              f = clamp(fromExp(+rowsMaxS.value), rowsMin, rowsMax),
+        const q = searchInput.value.trim().toLowerCase();
+      
+        const a   = clamp(fromExp(+nzMinS.value),   nzMin,   nzMax),
+              b   = clamp(fromExp(+nzMaxS.value),   nzMin,   nzMax),
+              c   = +degMinS.value,
+              d   = +degMaxS.value,
+              e   = clamp(fromExp(+rowsMinS.value), rowsMin, rowsMax),
+              f   = clamp(fromExp(+rowsMaxS.value), rowsMin, rowsMax),
               cat = categoryFilter.value;
+      
         return data
-          .filter(x =>
-            x.nonzeros   >= a && x.nonzeros   <= b &&
-            x.avg_degree >= c && x.avg_degree <= d &&
-            x.rows       >= e && x.rows       <= f &&
-            (!cat || x.category === cat)
-          )
-          .sort((u,v) => {
+          .filter(entry => {
+            // slider‐based filters
+            const inRange =
+              entry.nonzeros   >= a && entry.nonzeros   <= b &&
+              entry.avg_degree >= c && entry.avg_degree <= d &&
+              entry.rows       >= e && entry.rows       <= f;
+      
+            // category filter (empty = all)
+            const inCategory = !cat || entry.category === cat;
+      
+            // search filter (case‐insensitive partial match)
+            const inSearch = !q || entry.problem.toLowerCase().includes(q);
+      
+            return inRange && inCategory && inSearch;
+          })
+          .sort((u, v) => {
             const uv = u[currentSortColumn],
                   vv = v[currentSortColumn];
-            if (typeof uv === "number")
+            if (typeof uv === "number") {
               return currentSortOrder === "asc" ? uv - vv : vv - uv;
+            }
             return currentSortOrder === "asc"
               ? String(uv).localeCompare(vv)
               : String(vv).localeCompare(uv);
@@ -216,6 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
         currentPage = 1; updateView();
       });
 
+      searchInput.addEventListener("input", () => {
+        currentPage = 1;
+        updateView();
+      });
+
       rowsPerPageInput.max = data.length;
       rowsPerPageInput.addEventListener("change", () => {
         let v = parseInt(rowsPerPageInput.value,10) || 1;
@@ -314,6 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
         params.set("pp", rowsPerPage);
         params.set("sort", currentSortColumn);
         params.set("order", currentSortOrder);
+        params.set("q", searchInput.value);
 
         const url = `${location.origin}${location.pathname}?${params}`;
         navigator.clipboard.writeText(url).then(() => {
@@ -340,6 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentPage            = 1;
         currentSortColumn      = defaults.sortCol;
         currentSortOrder       = defaults.sortOrder;
+        searchInput.value = "";
 
         // reset sort arrows
         document.querySelectorAll(".sort-arrow")
@@ -378,6 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (params.has("pp"))    rowsPerPage       = +params.get("pp");
       if (params.has("sort"))  currentSortColumn = params.get("sort");
       if (params.has("order")) currentSortOrder  = params.get("order");
+      if (params.has("q"))  searchInput.value = params.get("q");
 
       // initial render
       updateView();
