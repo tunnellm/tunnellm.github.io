@@ -27,47 +27,53 @@ no_title: true
     Conditioning & Acceleration: Preconditioner Performance Analysis Repository
 </h2>
 
-<!-- ===  Blurb toggle component  ======================================== -->
-<style>
+
+    <style>
     /* Container */
-    .blurb-box{
-        border:1px solid #ddd;
-        padding:1.2rem 1rem;
-        border-radius:0.5rem;
-        max-width:800px;
-        margin:1rem auto;
-        font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    .blurb-box {
+    border: 1px solid #ddd;
+    padding: 1.2rem 1rem;
+    padding-bottom: 1.2rem; /* ensure room when expanded */
+    border-radius: 0.5rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
-    
+
     /* Toggle button */
-    .blurb-toggle{
-        margin-top:0.8rem;
-        padding:0.35rem 0.9rem;
-        font-size:0.95rem;
-        border:1px solid #555;
-        border-radius:0.4rem;
-        background:#fff;
-        cursor:pointer;
-        transition:background 0.2s;
+    .blurb-toggle {
+    margin-top: 0.8rem;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1px solid #555;
+    border-radius: 0.4rem;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
     }
-    .blurb-toggle:hover{background:#f3f3f3;}
-    
+    .blurb-toggle:hover {
+    background: #f3f3f3;
+    }
+
     /* Long blurb (starts hidden) */
-    .blurb-long{
-        overflow:hidden;
-        max-height:0;                       /* Collapsed */
-        opacity:0;
-        transition:max-height 0.35s ease,   /* slide */
-                   opacity   0.35s ease;    /* fade  */
+    .blurb-long {
+    overflow: hidden;
+    max-height: 0;   /* collapsed */
+    opacity: 0;
+    transition:
+        opacity    0.25s ease,
+        max-height 0.35s ease 0.1s;
     }
-    .blurb-long.open{
-        max-height:1000px;  /* any value larger than the content height */
-        opacity:1;
+
+    /* Revealed state */
+    .blurb-long.open {
+    max-height: 100vh;  /* always big enough */
+    opacity: 1;
     }
     </style>
     
     <div class="blurb-box">
-      <!-- Short blurb always visible -->
+
       <p class="blurb-short">
           This repository presents the single‑matrix convergence results from our empirical
           study of preconditioners for symmetric positive definite linear systems.
@@ -77,7 +83,7 @@ no_title: true
           Show more details ↓
       </button>
     
-      <!-- Long blurb toggles visibility -->
+
       <div id="blurbLong" class="blurb-long" aria-hidden="true">
           <p>
             The dataset contains per-matrix convergence traces for
@@ -94,21 +100,7 @@ no_title: true
       </div>
     </div>
     
-    <script>
-    /* ===  simple toggler  === */
-    document.addEventListener('DOMContentLoaded', ()=>{
-        const btn   = document.getElementById('blurbToggle');
-        const panel = document.getElementById('blurbLong');
-    
-        btn.addEventListener('click',()=>{
-            const open = panel.classList.toggle('open');       // slide open/closed
-            btn.textContent = open ? 'Hide details ↑' : 'Show more details ↓';
-            btn.setAttribute('aria-expanded', open);
-            panel.setAttribute('aria-hidden', !open);
-        });
-    });
-    </script>
-    <!-- ===================================================================== -->
+
 
 <link rel="stylesheet" href="/assets/css/performance.css">
 

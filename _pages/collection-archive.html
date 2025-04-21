@@ -8,16 +8,6 @@ author_profile: true
 {% include base_path %}
 {% capture written_label %}'None'{% endcapture %}
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-60BK2NB0VL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-60BK2NB0VL');
-</script>
-
 {% for collection in site.collections %}
   {% unless collection.output == false or collection.label == "posts" %}
     {% capture label %}{{ collection.label }}{% endcapture %}

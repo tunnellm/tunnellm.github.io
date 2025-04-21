@@ -26,6 +26,16 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+    <!-- in your default layout, just before </body> -->
+  <script src="/assets/js/blurb-toggle.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-60BK2NB0VL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-60BK2NB0VL');
+  </script>
   </body>
 </html>

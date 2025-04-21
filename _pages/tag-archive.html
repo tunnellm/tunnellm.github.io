@@ -7,16 +7,6 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-60BK2NB0VL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-60BK2NB0VL');
-</script>
-
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
