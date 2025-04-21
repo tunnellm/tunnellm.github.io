@@ -20,9 +20,20 @@
 
 /* Improve pagination button spacing for mobile */
 #pagination button {
-    padding: 10px;
-    font-size: 14px;
-    margin: 2px;
+    padding: 5px 5px;
+
+    /* font-size: 14px;
+    margin: 2px; */
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    /* padding: 2px 2px; */
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.09)
 }
 
 /* Improve input box usability on mobile */
@@ -145,4 +156,16 @@
     max-width: 400px;            /* cap size */
     width: 100%;
     margin: 10px auto;
+}
+
+
+#pagination button:disabled {
+    opacity: 0.5;
+    cursor: default;
+    box-shadow: none;
+}
+  
+
+#pagination button:disabled:hover {
+    background-color: #fff;
 }
