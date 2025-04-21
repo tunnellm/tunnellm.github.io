@@ -92,7 +92,7 @@ no_title: true
               Each plot shows the floating-point work required for the preconditioned
               Conjugate Gradient method to reach a relative residual of
               <code>10<sup>‑10</sup></code>. 
-              The horizontal axis denotes the work expended (in FLOPs) per iteration, while the vertical axis shows the corresponding residual norm. Both axes are on a log-log scale.
+              The horizontal axis denotes the cumulative work expended (in FLOPs) as a function of iterations, while the vertical axis shows the corresponding residual norm. Both axes are on a log-log scale.
               
               The control (no preconditioner) is shown in blue. All configurations of the highlighted preconditioner appear in red; other tested preconditioners are shown in gray.
               The results span classical iterative techniques, incomplete Cholesky variants, sparse approximate inverses, and algebraic multigrid schemes, allowing direct side-by-side comparisons of preconditioner effectiveness and robustness on real-world matrices.
