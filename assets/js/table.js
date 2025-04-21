@@ -169,13 +169,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let currentPage = 1;
             // const rowsPerPage = 10; // Adjust this value to control how many rows appear per page
-            let rowsPerPage = 10; // Default value
+            let rowsPerPage = 25; // Default value
             const rowsPerPageInput = document.getElementById("rows-per-page");
             rowsPerPageInput.max = data.length; // Set max value to total number of entries
             
             rowsPerPageInput.addEventListener("change", () => {
                 let maxRows = data.length; // Get the total number of entries
-                let inputVal = parseInt(rowsPerPageInput.value) || 10;
+                let inputVal = parseInt(rowsPerPageInput.value) || 25;
             
                 // Ensure the value stays between 1 and the total number of entries
                 if (inputVal < 1) inputVal = 1;

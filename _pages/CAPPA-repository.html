@@ -1,0 +1,166 @@
+---
+layout: archive
+title: "CAPPA Repository"
+permalink: /CAPPA-repository/
+author_profile: true
+no_title: true
+---
+
+{% include base_path %}
+
+<!-- <h1 style="text-align: center;">CAPPA Repository</h1>
+<h2 style="text-align: center; font-weight: normal; color: #555;">
+    Conditioning & Acceleration: Preconditioner Performance Analysis Repository
+</h2> -->
+<h1 id="main-title" style="text-align: center; margin-bottom: 0.1em;">CAPPA Repository</h1>
+<h2 id="subtitle" style="text-align: center; font-weight: normal; color: #555; margin-bottom: 0.1em; margin-top: 0.25em;">
+    Conditioning & Acceleration: Preconditioner Performance Analysis Repository
+</h2>
+
+<!-- ===  Blurb toggle component  ======================================== -->
+<style>
+    /* Container */
+    .blurb-box{
+        border:1px solid #ddd;
+        padding:1.2rem 1rem;
+        border-radius:0.5rem;
+        max-width:800px;
+        margin:1rem auto;
+        font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+    
+    /* Toggle button */
+    .blurb-toggle{
+        margin-top:0.8rem;
+        padding:0.35rem 0.9rem;
+        font-size:0.95rem;
+        border:1px solid #555;
+        border-radius:0.4rem;
+        background:#fff;
+        cursor:pointer;
+        transition:background 0.2s;
+    }
+    .blurb-toggle:hover{background:#f3f3f3;}
+    
+    /* Long blurb (starts hidden) */
+    .blurb-long{
+        overflow:hidden;
+        max-height:0;                       /* Collapsed */
+        opacity:0;
+        transition:max-height 0.35s ease,   /* slide */
+                   opacity   0.35s ease;    /* fade  */
+    }
+    .blurb-long.open{
+        max-height:1000px;  /* any value larger than the content height */
+        opacity:1;
+    }
+    </style>
+    
+    <div class="blurb-box">
+      <!-- Short blurb always visible -->
+      <p class="blurb-short">
+          This repository presents the single‑matrix convergence results from our empirical
+          study of preconditioners for symmetric positive definite linear systems.
+      </p>
+    
+      <button id="blurbToggle" class="blurb-toggle" aria-expanded="false">
+          Show more details ↓
+      </button>
+    
+      <!-- Long blurb toggles visibility -->
+      <div id="blurbLong" class="blurb-long" aria-hidden="true">
+          <p>
+            The dataset contains per-matrix convergence traces for
+              <strong>9</strong> widely used preconditioners evaluated on
+              <strong>79</strong> SPD matrices from the SuiteSparse Matrix Collection.
+              Each plot shows the floating-point work required for the preconditioned
+              Conjugate Gradient method to reach a relative residual of
+              <code>10<sup>‑10</sup></code>. 
+              The horizontal axis denotes the work expended (in FLOPs) per iteration, while the vertical axis shows the corresponding residual norm. Both axes are on a log-log scale.
+              
+              The control (no preconditioner) is shown in blue. All configurations of the highlighted preconditioner appear in red; other tested preconditioners are shown in gray.
+              The results span classical iterative techniques, incomplete Cholesky variants, sparse approximate inverses, and algebraic multigrid schemes, allowing direct side-by-side comparisons of preconditioner effectiveness and robustness on real-world matrices.
+          </p>
+      </div>
+    </div>
+    
+    <script>
+    /* ===  simple toggler  === */
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const btn   = document.getElementById('blurbToggle');
+        const panel = document.getElementById('blurbLong');
+    
+        btn.addEventListener('click',()=>{
+            const open = panel.classList.toggle('open');       // slide open/closed
+            btn.textContent = open ? 'Hide details ↑' : 'Show more details ↓';
+            btn.setAttribute('aria-expanded', open);
+            panel.setAttribute('aria-hidden', !open);
+        });
+    });
+    </script>
+    <!-- ===================================================================== -->
+
+<link rel="stylesheet" href="/assets/css/performance.css">
+
+<!-- <h1 style="font-size: 2em; text-align: center;">Preconditioner Performance Repository</h1> -->
+
+<!-- Filter Dropdown -->
+<select id="category-filter">
+    <option value="">All Categories</option>
+</select>
+
+<label for="rows-per-page">Rows per page:</label>
+<input type="number" id="rows-per-page" value="25" min="1" style="width: 65px; font-size: 16px;">
+
+<!-- Toggle Button -->
+<button id="toggle-filters">Show Filters ↓</button>
+
+<!-- Collapsible Filter Section -->
+<div id="filter-container">
+    <!-- Metric 1 Slider -->
+    <label for="nonzero-slider">Nonzero Value Range:</label>
+    <div class="slider-container">
+        <input type="range" id="nonzero-range-min">
+        <input type="range" id="nonzero-range-max">
+    </div>
+    <span id="nonzero-range-display">Loading...</span>
+
+    <!-- Metric 2 Slider -->
+    <label for="degree-slider">Average Degree Range:</label>
+    <div class="slider-container">
+        <input type="range" id="degree-range-min" step="0.25">
+        <input type="range" id="degree-range-max" step="0.25">
+    </div>
+    <span id="degree-range-display">Loading...</span>
+
+    <!-- Metric 3 Slider -->
+    <label for="rows-slider">Rows Range:</label>
+    <div class="slider-container">
+        <input type="range" id="rows-range-min">
+        <input type="range" id="rows-range-max">
+    </div>
+    <span id="rows-range-display">Loading...</span>
+</div>
+
+<!-- <p>Click a column header to sort.</p> -->
+<div class="table-wrapper">
+    <table id="performance-table" border="1">
+    <thead>
+        <tr>
+            <th class="sortable" data-sort="problem">Problem <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="nonzeros">Nonzero values <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="avg_degree">Average node degree <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="rows">Rows <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="category">Category <span class="sort-arrow"></span></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    </table>
+</div>
+<div id="pagination"></div>
+
+<!-- Include the JS script -->
+<script src="/assets/js/table.js"></script>
+
+<div id="details">Click on a problem to see details.</div>
+
