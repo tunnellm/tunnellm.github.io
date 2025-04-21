@@ -226,6 +226,26 @@ document.addEventListener("DOMContentLoaded", () => {
           currentPage = 1; updateView();
         }));
 
+
+      function attachPushOff(minSlider, maxSlider, onChange) {
+        // drag left thumb
+        minSlider.addEventListener("input", () => {
+          const min = +minSlider.value;
+          if (min > +maxSlider.value) maxSlider.value = min;
+          onChange();
+        });
+        // drag right thumb
+        maxSlider.addEventListener("input", () => {
+          const max = +maxSlider.value;
+          if (max < +minSlider.value) minSlider.value = max;
+          onChange();
+        });
+      }
+
+      attachPushOff(nzMinS,   nzMaxS,   () => { currentPage = 1; updateView(); });
+      attachPushOff(degMinS,  degMaxS,  () => { currentPage = 1; updateView(); });
+      attachPushOff(rowsMinS, rowsMaxS, () => { currentPage = 1; updateView(); });
+
       categoryFilter.addEventListener("change", () => {
         currentPage = 1; updateView();
       });
