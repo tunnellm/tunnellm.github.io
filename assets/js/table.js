@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const degVals  = data.map(d=>d.avg_degree);
       const rowsVals = data.map(d=>d.rows);
 
-      const nzMin   = Math.min(...nzVals),   nzMax   = Math.max(...nzVals);
-      const degMin  = Math.min(...degVals),  degMax  = Math.max(...degVals);
-      const rowsMin = Math.min(...rowsVals), rowsMax = Math.max(...rowsVals);
+      const nzMin   = Math.min(...nzVals) - 1,   nzMax   = Math.max(...nzVals) + 1;
+      const degMin  = Math.min(...degVals) - .5,  degMax  = Math.max(...degVals) + .5;
+      const rowsMin = Math.min(...rowsVals) - 1, rowsMax = Math.max(...rowsVals) + 1;
 
       // exponent‐slider bounds
       const ezMin = niceExpFloor(nzMin), ezMax = niceExpCeil(nzMax);
@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
       rowsMaxS.min = erMin; rowsMaxS.max = erMax; rowsMaxS.step = .25; rowsMaxS.value = erMax;
       degMinS.min = degMin; degMinS.max = degMax; degMinS.value = degMin;
       degMaxS.min = degMin; degMaxS.max = degMax; degMaxS.value = degMax;
+
+      degMinS.step = 0.25;
+      degMaxS.step = 0.25;
 
       // update text displays
       function updateRangeDisplays() {
