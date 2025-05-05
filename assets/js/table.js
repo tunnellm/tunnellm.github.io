@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // state
   let currentPage       = 1;
-  let rowsPerPage       = parseInt(rowsPerPageInput.value,10) || 25;
+  let rowsPerPage       = parseInt(rowsPerPageInput.value, 10) || 79;
   let currentSortColumn = "problem";
   let currentSortOrder  = "asc";
 
