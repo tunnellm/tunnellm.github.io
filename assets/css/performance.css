@@ -184,3 +184,14 @@
 #pagination button:disabled:hover {
     background-color: #fff;
 }
+
+#main-symbol-img {
+  width: 70%;
+  max-width: 1760px;
+  min-width: 80px;
+  height: auto;
+  margin-bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
