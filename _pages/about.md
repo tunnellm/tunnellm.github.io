@@ -11,7 +11,7 @@ redirect_from:
 
 ## About me
 
-I am a second-year Computer Science PhD student at Purdue University, West Lafayette, where I am part of the Computational Science and Engineering research group. My research primarily focuses on the development of novel preconditioners for symmetric positive definite systems, with the goal of narrowing the gap between theoretical advancements and their practical applications in scientific computing.
+I am a third-year Computer Science PhD student at Purdue University, West Lafayette, where I am part of the Computational Science and Engineering research group. My research primarily focuses on the development of novel preconditioners for symmetric positive definite systems, with the goal of narrowing the gap between theoretical advancements and their practical applications in scientific computing.
 
 I am particularly interested in creating methods optimized for modern high-performance computing environments, including GPU accelerations and many-core systems, to achieve faster and more efficient solutions to complex computation problems.
 
