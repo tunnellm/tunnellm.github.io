@@ -1,0 +1,15 @@
+{% comment %}
+Render a consistent date / date range with thin spaces around the en dash.
+Usage:
+  {% include date-range.html start=post.start end=post.end present=post.present date=post.date %}
+{% endcomment %}
+
+{% if include.start and include.end %}
+  {{ include.start | date: "%Y" }}&thinsp;–&thinsp;{{ include.end | date: "%Y" }}
+{% elsif include.start and include.present %}
+  {{ include.start | date: "%Y" }}&thinsp;–&thinsp;Present
+{% elsif include.start %}
+  {{ include.start | date: "%Y" }}
+{% elsif include.date %}
+  {{ include.date | date: "%Y" }}
+{% endif %}

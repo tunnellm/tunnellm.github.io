@@ -237,24 +237,43 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
     output: true
     permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
-  research-experience:
+  teaching:
     output: true
     permalink: /:collection/:path/
-  volunteer-work:
+  work:
     output: true
     permalink: /:collection/:path/
+  service:
+    output: true
+    permalink: /:collection/:path/
+  professional:
+    output: true
+    permalink: /:collection/:path/
+  cv:
+    output: true
+    permalink: /:collection/:path/
+  cappa-repository:
+    output: true
+    permalink: /:collection/:path/
+
+# For grouped Publications page:
+publication_category:
+  journal:
+    title: "Journal Articles"
+  preprint:
+    title: "Preprint Articles"
+  conference:
+    title: "Conference Papers"
+  abstract:
+    title: "Posters & Abstracts"
+  report:
+    title: "Technical Reports"
 
 
 # These settings control how pages and collections are included in the site
@@ -270,6 +289,7 @@ defaults:
       comments: true
       share: true
       related: true
+
   # _pages
   - scope:
       path: ""
@@ -277,6 +297,27 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single          # keep simple page layout
+      author_profile: true
+      share: true
+      comments: false         # usually off for pubs
+
+  # _talks
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: single          # use 'talk' only if you actually have that layout
+      author_profile: true
+      share: true
+      comments: false
+
   # _teaching
   - scope:
       path: ""
@@ -285,49 +326,63 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
-  # _publications
+      comments: false
+
+  # _work
   - scope:
       path: ""
-      type: publications
+      type: work
     values:
       layout: single
       author_profile: true
       share: true
-      comments: true
-  # _portfolio
+      comments: false
+
+  # _service
   - scope:
       path: ""
-      type: portfolio
+      type: service
     values:
       layout: single
       author_profile: true
       share: true
-      comment: true
-  # _talks
+      comments: false
   - scope:
       path: ""
-      type: talks
+      type: cv
     values:
-      layout: talk
+      layout: single
       author_profile: true
-      share: true
-  # _research-experience
+  
+
   - scope:
       path: ""
-      type: research-experience
+      type: professional
     values:
-      layout: talk
+      layout: single
       author_profile: true
-      share: true
-  # _volunteer-work
+      read_time: false
+      share: false
+      related: false
+
   - scope:
       path: ""
-      type: volunteer-work
+      type: cappa-repository
     values:
-      layout: talk
-      author_profile: true
-      share: true
+      layout: single
+      author_profile: false
+
+talk_category:
+  - title: "Invited Talks"
+    values: ["invited talk", "invited"]
+  - title: "Oral Presentations"
+    values: ["oral presentation", "oral"]
+  - title: "Lightning Talks"
+    values: ["lightning talk", "lightning"]
+  - title: "Poster Presentations"
+    values: ["poster presentation", "poster"]
+  - title: "Panels & Workshops"
+    values: ["panel", "workshop"]
 
 # Sass/SCSS
 sass:

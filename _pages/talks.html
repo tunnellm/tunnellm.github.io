@@ -1,36 +1,43 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks & Presentations"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
-
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-
-{% endif %}
+{% include base_path %}
 
 {% if site.talk_category %}
-  {% for category in site.talk_category  %}
+  {% assign remaining = site.talks | map: "url" %}
+
+  {% for cat in site.talk_category %}
     {% assign title_shown = false %}
     {% for post in site.talks reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+      {% assign t = post.type | default: "" | downcase %}
+      {% if cat.values contains t %}
+        {% unless title_shown %}
+          <h2>{{ cat.title }}</h2><hr />
+          {% assign title_shown = true %}
+        {% endunless %}
+        {% include archive-single.html %}
+        {%- comment -%} mark as rendered {%- endcomment -%}
+        {% assign remaining = remaining | where_exp: "x", "x != post.url" %}
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single-talk.html %}
     {% endfor %}
   {% endfor %}
+
+  {%- comment -%} Fallback bucket for any unmatched types {%- endcomment -%}
+  {% if remaining and remaining.size > 0 %}
+    <h2>Other</h2><hr />
+    {% for post in site.talks reversed %}
+      {% if remaining contains post.url %}
+        {% include archive-single.html %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 {% else %}
+  {# Fallback: no categories configured, show all talks #}
   {% for post in site.talks reversed %}
-    {% include archive-single-talk.html %}
+    {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-<!-- {% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %} -->

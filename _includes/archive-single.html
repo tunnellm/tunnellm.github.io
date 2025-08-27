@@ -12,8 +12,11 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% assign show_body = false %}
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
@@ -28,60 +31,185 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}">{{ title }}</a>
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    
+
     {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+      <div class="page__meta meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</div>
     {% endif %}
 
-        {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == 'publications' %}
-            {% if post.authors %}
-            <p><i class="fa fa-user" aria-hidden="true"></i> {{ post.authors }}</p>
-            {% endif %}
-            {% if post.venue and post.status and post.date %}
-            <p><i class="fa fa-check-circle"></i> {{ post.status }}: <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-            {% elsif post.venue and post.status %}
-            <p><i class="fa fa-check-circle"></i> {{ post.status }}: <i>{{ post.venue }}</i></p>
-            {% elsif post.venue and post.date %}
-            <p><i class="fa fa-check-circle"></i> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-            {% elsif post.status and post.date %}
-            <p><i class="fa fa-check-circle"></i> {{ post.status }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-            {% elsif post.venue %}
-            <p><i class="fa fa-check-circle"></i> <i>{{ post.venue }}</i></p>
-            {% elsif post.status %}
-            <p><i class="fa fa-check-circle"></i> {{ post.status }}</p>
-            {% elsif post.date %}
-            <p><i class="fa fa-fw fa-calendar"></i> {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-          {% endif %}
-        {% elsif post.date %}
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+    {%- comment -%} COLLECTION-SPECIFIC META ROWS {%- endcomment -%}
+
+    {% if post.collection == 'publications' %}
+
+      {% if post.authors %}
+        <div class="meta"><i class="fa fa-user" aria-hidden="true"></i> {{ post.authors }}</div>
+      {% endif %}
+
+      {% assign parts = "" | split: "" %}
+      {% if post.venue and post.venue != "" %}
+        {% capture v %}<i>{{ post.venue }}</i>{% endcapture %}
+        {% assign parts = parts | push: v %}
+      {% endif %}
+      {% if post.location and post.location != "" %}
+        {% assign parts = parts | push: post.location %}
+      {% endif %}
+      {% capture d %}{% include date-range.html date=post.date %}{% endcapture %}
+      {% if d and d != "" %}
+        {% assign parts = parts | push: d %}
+      {% endif %}
+      {% if parts.size > 0 %}
+        <div class="meta"><i class="fa fa-check-circle" aria-hidden="true"></i> {{ parts | join: ". " }}</div>
+      {% endif %}
+
+    {% elsif post.collection == 'work' %}
+
+      {% assign parts = "" | split: "" %}
+      {% if post.organization and post.organization != "" %}
+        {% capture v %}<i>{{ post.organization }}</i>{% endcapture %}
+        {% assign parts = parts | push: v %}
+      {% endif %}
+      {% if post.location and post.location != "" %}
+        {% assign parts = parts | push: post.location %}
+      {% endif %}
+      {% capture d %}{% include date-range.html start=post.start end=post.end present=post.present %}{% endcapture %}
+      {% if d and d != "" %}
+        {% assign parts = parts | push: d %}
+      {% endif %}
+      <div class="meta">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <strong>{{ post.title }}</strong>. {{ parts | join: ". " }}
+      </div>
+
+    {% elsif post.collection == 'service' %}
+
+      {% assign parts = "" | split: "" %}
+      {% if post.organization and post.organization != "" %}
+        {% capture v %}<i>{{ post.organization }}</i>{% endcapture %}
+        {% assign parts = parts | push: v %}
+      {% endif %}
+      {% if post.location and post.location != "" %}
+        {% assign parts = parts | push: post.location %}
+      {% endif %}
+      {% assign _last_date = "" %}
+      {% if post.dates and post.dates.size > 0 %}
+        {% assign _last_date = post.dates | last %}
+      {% endif %}
+      {% capture d %}{% if _last_date != "" %}{% include date-range.html date=_last_date %}{% endif %}{% endcapture %}
+      {% if d and d != "" %}
+        {% assign parts = parts | push: d %}
+      {% endif %}
+      <div class="meta">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <strong>{{ post.title }}</strong>. {{ parts | join: ". " }}
+      </div>
+
+    {% elsif post.collection == 'teaching' %}
+
+      {% assign parts = "" | split: "" %}
+      {% if post.venue and post.venue != "" %}
+        {% capture v %}<i>{{ post.venue }}</i>{% endcapture %}
+        {% assign parts = parts | push: v %}
+      {% endif %}
+      {% if post.location and post.location != "" %}
+        {% assign parts = parts | push: post.location %}
+      {% endif %}
+      {% capture d %}{% include date-range.html date=post.date %}{% endcapture %}
+      {% if d and d != "" %}
+        {% assign parts = parts | push: d %}
+      {% endif %}
+      <div class="meta">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        {{ parts | join: ". " }}
+      </div>
+
+    {% elsif post.collection == 'talks' %}
+
+      {% assign parts = "" | split: "" %}
+      {% if post.venue and post.venue != "" %}
+        {% capture v %}<i>{{ post.venue }}</i>{% endcapture %}
+        {% assign parts = parts | push: v %}
+      {% endif %}
+      {% if post.location and post.location != "" %}
+        {% assign parts = parts | push: post.location %}
+      {% endif %}
+      {% capture d %}{% include date-range.html date=post.date %}{% endcapture %}
+      {% if d and d != "" %}
+        {% assign parts = parts | push: d %}
+      {% endif %}
+      <div class="meta">
+        {% if post.type and post.type contains "Lightning" %}
+          <i class="fa fa-bolt" aria-hidden="true"></i>
+        {% elsif post.type and post.type contains "Poster" %}
+          <i class="fa fa-image" aria-hidden="true"></i>
+        {% else %}
+          <i class="fa fa-microphone" aria-hidden="true"></i>
         {% endif %}
+        {{ parts | join: ". " }}
+      </div>
+      
+    {% elsif post.collection == 'professional' %}
 
-    {% if post.excerpt and site.read_more != 'enabled' %}
-    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-    {% elsif post.excerpt and site.read_more == 'enabled' %}
-    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+      {% assign org = post.organization | default: "" | strip %}
+      {% assign loc = post.location     | default: "" | strip %}
+      {% assign s   = post.start        | default: "" | strip %}
+      {% assign e   = post.end          | default: "" | strip %}
+      {% assign d   = post.date         | default: "" | strip %}
+
+      {% assign date_str = "" %}
+      {% if s != "" and e != "" %}
+        {% assign date_str = s | date: "%Y" | append: "–" | append: (e | date: "%Y") %}
+      {% elsif s != "" and post.present %}
+        {% assign date_str = s | date: "%Y" | append: "–Present" %}
+      {% elsif s != "" %}
+        {% assign date_str = s | date: "%Y" %}
+      {% elsif d != "" %}
+        {% assign date_str = d | date: "%Y" %}
+      {% endif %}
+
+      {%- assign has = false -%}
+      {%- assign meta = "" -%}
+
+      {%- if org != "" -%}
+        {% capture meta %}{{ meta }}<i>{{ org }}</i>{% endcapture %}
+        {%- assign has = true -%}
+      {%- endif -%}
+
+      {%- if loc != "" -%}
+        {% capture meta %}{{ meta }}{% if has %}. {% endif %}{{ loc }}{% endcapture %}
+        {%- assign has = true -%}
+      {%- endif -%}
+
+      {%- if date_str != "" -%}
+        {% capture meta %}{{ meta }}{% if has %}. {% endif %}{{ date_str }}{% endcapture %}
+        {%- assign has = true -%}
+      {%- endif -%}
+
+      <div class="meta">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <strong>{{ post.title }}</strong>{% if meta != "" %}. {{ meta }}{% endif %}
+      </div>
+      {% assign show_body = false %}
+
+    {% elsif post.date %}
+
+      <div class="meta"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</div>
+
     {% endif %}
-    
-    {% if post.citation and post.paperurl and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a></p>
-    {% elsif post.citation and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }}</p>
-    {% elsif post.paperurl %}
-      <p><a href=" {{ post.paperurl }} ">Download Paper</a></p>
-    {% elsif post.slidesurl %}
-      <p>Download <a href="{{ post.slidesurl }}">Download Slides</a></p></p>
-    {% endif %}
+
+    {%- comment -%} Suppress body/excerpt for archive lists {%- endcomment -%}
+    {% assign suppress = "publications,professional,work,service,teaching,talks" | split: "," %}
+    {% unless suppress contains post.collection %}
+      {% if post.excerpt and site.read_more != 'enabled' %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+      {% elsif post.excerpt and site.read_more == 'enabled' %}
+        <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+      {% endif %}
+    {% endunless %}
 
   </article>
 </div>

@@ -39,3 +39,16 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* tighter archive meta rows */
+.archive__item .meta {
+  margin: 2px 0;      /* reduce vertical space between lines */
+  line-height: 1.2;   /* tighter line height */
+}
+
+/* optional: tighten the title's bottom margin slightly */
+.archive__item-title {
+  margin-bottom: 6px;
+}
+
+.archive__item .meta i.fa { margin-right: 0.35em; }
