@@ -5,7 +5,7 @@
         "category": "Electromagnetics",
         "avg_degree": 16.230481220194694,
         "rows": 101492,
-        "image": "/assets/repo_images/2cubes_sphere.png"
+        "image": "/assets/repo_images/2cubes_sphere.jpg"
     },
     {
         "problem": "Andrews",
@@ -13,7 +13,7 @@
         "category": "Computer Vision",
         "avg_degree": 12.669233333333333,
         "rows": 60000,
-        "image": "/assets/repo_images/Andrews.png"
+        "image": "/assets/repo_images/Andrews.jpg"
     },
     {
         "problem": "BenElechi1",
@@ -21,7 +21,7 @@
         "category": "2D/3D",
         "avg_degree": 53.48469541309777,
         "rows": 245874,
-        "image": "/assets/repo_images/BenElechi1.png"
+        "image": "/assets/repo_images/BenElechi1.jpg"
     },
     {
         "problem": "Bump_2911",
@@ -29,7 +29,7 @@
         "category": "2D/3D",
         "avg_degree": 43.87204280799157,
         "rows": 2911419,
-        "image": "/assets/repo_images/Bump_2911.png"
+        "image": "/assets/repo_images/Bump_2911.jpg"
     },
     {
         "problem": "Dubcova1",
@@ -37,7 +37,7 @@
         "category": "2D/3D",
         "avg_degree": 15.686589373178746,
         "rows": 16129,
-        "image": "/assets/repo_images/Dubcova1.png"
+        "image": "/assets/repo_images/Dubcova1.jpg"
     },
     {
         "problem": "Dubcova2",
@@ -45,7 +45,7 @@
         "category": "2D/3D",
         "avg_degree": 15.843521722414456,
         "rows": 65025,
-        "image": "/assets/repo_images/Dubcova2.png"
+        "image": "/assets/repo_images/Dubcova2.jpg"
     },
     {
         "problem": "Dubcova3",
@@ -53,7 +53,7 @@
         "category": "2D/3D",
         "avg_degree": 24.79151810974238,
         "rows": 146689,
-        "image": "/assets/repo_images/Dubcova3.png"
+        "image": "/assets/repo_images/Dubcova3.jpg"
     },
     {
         "problem": "Emilia_923",
@@ -61,7 +61,7 @@
         "category": "Structural",
         "avg_degree": 43.73520044717138,
         "rows": 923136,
-        "image": "/assets/repo_images/Emilia_923.png"
+        "image": "/assets/repo_images/Emilia_923.jpg"
     },
     {
         "problem": "Fault_639",
@@ -69,7 +69,7 @@
         "category": "Structural",
         "avg_degree": 42.65162601244204,
         "rows": 638802,
-        "image": "/assets/repo_images/Fault_639.png"
+        "image": "/assets/repo_images/Fault_639.jpg"
     },
     {
         "problem": "Flan_1565",
@@ -77,7 +77,7 @@
         "category": "Structural",
         "avg_degree": 72.9587230012385,
         "rows": 1564794,
-        "image": "/assets/repo_images/Flan_1565.png"
+        "image": "/assets/repo_images/Flan_1565.jpg"
     },
     {
         "problem": "G2_circuit",
@@ -85,7 +85,7 @@
         "category": "Circuit Simulation",
         "avg_degree": 4.8412013164381555,
         "rows": 150102,
-        "image": "/assets/repo_images/G2_circuit.png"
+        "image": "/assets/repo_images/G2_circuit.jpg"
     },
     {
         "problem": "G3_circuit",
@@ -93,7 +93,7 @@
         "category": "Circuit Simulation",
         "avg_degree": 4.831871523918969,
         "rows": 1585478,
-        "image": "/assets/repo_images/G3_circuit.png"
+        "image": "/assets/repo_images/G3_circuit.jpg"
     },
     {
         "problem": "Geo_1438",
@@ -101,7 +101,7 @@
         "category": "Structural",
         "avg_degree": 41.89012350830343,
         "rows": 1437960,
-        "image": "/assets/repo_images/Geo_1438.png"
+        "image": "/assets/repo_images/Geo_1438.jpg"
     },
     {
         "problem": "Hook_1498",
@@ -109,7 +109,7 @@
         "category": "Structural",
         "avg_degree": 39.635206535547184,
         "rows": 1498023,
-        "image": "/assets/repo_images/Hook_1498.png"
+        "image": "/assets/repo_images/Hook_1498.jpg"
     },
     {
         "problem": "LF10000",
@@ -117,7 +117,7 @@
         "category": "Model Reduction",
         "avg_degree": 4.999599959996,
         "rows": 19998,
-        "image": "/assets/repo_images/LF10000.png"
+        "image": "/assets/repo_images/LF10000.jpg"
     },
     {
         "problem": "LFAT5000",
@@ -125,7 +125,7 @@
         "category": "Model Reduction",
         "avg_degree": 3.9994998499549865,
         "rows": 19994,
-        "image": "/assets/repo_images/LFAT5000.png"
+        "image": "/assets/repo_images/LFAT5000.jpg"
     },
     {
         "problem": "PFlow_742",
@@ -133,7 +133,7 @@
         "category": "2D/3D",
         "avg_degree": 49.99839928486133,
         "rows": 742793,
-        "image": "/assets/repo_images/PFlow_742.png"
+        "image": "/assets/repo_images/PFlow_742.jpg"
     },
     {
         "problem": "Pres_Poisson",
@@ -141,7 +141,7 @@
         "category": "Computational Fluid Dynamics",
         "avg_degree": 48.29334772635272,
         "rows": 14822,
-        "image": "/assets/repo_images/Pres_Poisson.png"
+        "image": "/assets/repo_images/Pres_Poisson.jpg"
     },
     {
         "problem": "Queen_4147",
@@ -149,7 +149,7 @@
         "category": "2D/3D",
         "avg_degree": 76.33001343103993,
         "rows": 4147110,
-        "image": "/assets/repo_images/Queen_4147.png"
+        "image": "/assets/repo_images/Queen_4147.jpg"
     },
     {
         "problem": "Serena",
@@ -157,7 +157,7 @@
         "category": "Structural",
         "avg_degree": 46.093374847001,
         "rows": 1391349,
-        "image": "/assets/repo_images/Serena.png"
+        "image": "/assets/repo_images/Serena.jpg"
     },
     {
         "problem": "StocF-1465",
@@ -165,7 +165,7 @@
         "category": "Computational Fluid Dynamics",
         "avg_degree": 14.336808776244133,
         "rows": 1465137,
-        "image": "/assets/repo_images/StocF-1465.png"
+        "image": "/assets/repo_images/StocF-1465.jpg"
     },
     {
         "problem": "Trefethen_20000",
@@ -173,7 +173,7 @@
         "category": "Combinatorial",
         "avg_degree": 27.7233,
         "rows": 20000,
-        "image": "/assets/repo_images/Trefethen_20000.png"
+        "image": "/assets/repo_images/Trefethen_20000.jpg"
     },
     {
         "problem": "Trefethen_20000b",
@@ -181,7 +181,7 @@
         "category": "Combinatorial",
         "avg_degree": 27.72313615680784,
         "rows": 19999,
-        "image": "/assets/repo_images/Trefethen_20000b.png"
+        "image": "/assets/repo_images/Trefethen_20000b.jpg"
     },
     {
         "problem": "af_0_k101",
@@ -189,7 +189,7 @@
         "category": "Structural",
         "avg_degree": 34.848696947133284,
         "rows": 503625,
-        "image": "/assets/repo_images/af_0_k101.png"
+        "image": "/assets/repo_images/af_0_k101.jpg"
     },
     {
         "problem": "af_1_k101",
@@ -197,7 +197,7 @@
         "category": "Structural",
         "avg_degree": 34.848696947133284,
         "rows": 503625,
-        "image": "/assets/repo_images/af_1_k101.png"
+        "image": "/assets/repo_images/af_1_k101.jpg"
     },
     {
         "problem": "af_2_k101",
@@ -205,7 +205,7 @@
         "category": "Structural",
         "avg_degree": 34.848696947133284,
         "rows": 503625,
-        "image": "/assets/repo_images/af_2_k101.png"
+        "image": "/assets/repo_images/af_2_k101.jpg"
     },
     {
         "problem": "af_3_k101",
@@ -213,7 +213,7 @@
         "category": "Structural",
         "avg_degree": 34.848696947133284,
         "rows": 503625,
-        "image": "/assets/repo_images/af_3_k101.png"
+        "image": "/assets/repo_images/af_3_k101.jpg"
     },
     {
         "problem": "af_4_k101",
@@ -221,7 +221,7 @@
         "category": "Structural",
         "avg_degree": 34.848696947133284,
         "rows": 503625,
-        "image": "/assets/repo_images/af_4_k101.png"
+        "image": "/assets/repo_images/af_4_k101.jpg"
     },
     {
         "problem": "af_5_k101",
@@ -229,7 +229,7 @@
         "category": "Structural",
         "avg_degree": 34.848696947133284,
         "rows": 503625,
-        "image": "/assets/repo_images/af_5_k101.png"
+        "image": "/assets/repo_images/af_5_k101.jpg"
     },
     {
         "problem": "af_shell3",
@@ -237,7 +237,7 @@
         "category": "Structural",
         "avg_degree": 34.78632676709154,
         "rows": 504855,
-        "image": "/assets/repo_images/af_shell3.png"
+        "image": "/assets/repo_images/af_shell3.jpg"
     },
     {
         "problem": "af_shell7",
@@ -245,7 +245,7 @@
         "category": "Structural",
         "avg_degree": 34.82020580166582,
         "rows": 504855,
-        "image": "/assets/repo_images/af_shell7.png"
+        "image": "/assets/repo_images/af_shell7.jpg"
     },
     {
         "problem": "apache1",
@@ -253,7 +253,7 @@
         "category": "Structural",
         "avg_degree": 6.710198019801981,
         "rows": 80800,
-        "image": "/assets/repo_images/apache1.png"
+        "image": "/assets/repo_images/apache1.jpg"
     },
     {
         "problem": "apache2",
@@ -261,7 +261,7 @@
         "category": "Structural",
         "avg_degree": 6.7366214749935684,
         "rows": 715176,
-        "image": "/assets/repo_images/apache2.png"
+        "image": "/assets/repo_images/apache2.jpg"
     },
     {
         "problem": "audikw_1",
@@ -269,7 +269,7 @@
         "category": "Structural",
         "avg_degree": 82.28489819274236,
         "rows": 943695,
-        "image": "/assets/repo_images/audikw_1.png"
+        "image": "/assets/repo_images/audikw_1.jpg"
     },
     {
         "problem": "bcsstk17",
@@ -277,7 +277,7 @@
         "category": "Structural",
         "avg_degree": 39.06050665208675,
         "rows": 10974,
-        "image": "/assets/repo_images/bcsstk17.png"
+        "image": "/assets/repo_images/bcsstk17.jpg"
     },
     {
         "problem": "bcsstk18",
@@ -285,7 +285,7 @@
         "category": "Structural",
         "avg_degree": 12.478239035821895,
         "rows": 11948,
-        "image": "/assets/repo_images/bcsstk18.png"
+        "image": "/assets/repo_images/bcsstk18.jpg"
     },
     {
         "problem": "bcsstk25",
@@ -293,7 +293,7 @@
         "category": "Structural",
         "avg_degree": 16.33791048643047,
         "rows": 15439,
-        "image": "/assets/repo_images/bcsstk25.png"
+        "image": "/assets/repo_images/bcsstk25.jpg"
     },
     {
         "problem": "bcsstk36",
@@ -301,7 +301,7 @@
         "category": "Structural",
         "avg_degree": 49.50286309213951,
         "rows": 23052,
-        "image": "/assets/repo_images/bcsstk36.png"
+        "image": "/assets/repo_images/bcsstk36.jpg"
     },
     {
         "problem": "bloweybq",
@@ -309,7 +309,7 @@
         "category": "Materials",
         "avg_degree": 4.9994000599940005,
         "rows": 10001,
-        "image": "/assets/repo_images/bloweybq.png"
+        "image": "/assets/repo_images/bloweybq.jpg"
     },
     {
         "problem": "bmw7st_1",
@@ -317,7 +317,7 @@
         "category": "Structural",
         "avg_degree": 51.776118347046626,
         "rows": 141347,
-        "image": "/assets/repo_images/bmw7st_1.png"
+        "image": "/assets/repo_images/bmw7st_1.jpg"
     },
     {
         "problem": "bmwcra_1",
@@ -325,7 +325,7 @@
         "category": "Structural",
         "avg_degree": 71.5305639577872,
         "rows": 148770,
-        "image": "/assets/repo_images/bmwcra_1.png"
+        "image": "/assets/repo_images/bmwcra_1.jpg"
     },
     {
         "problem": "bodyy4",
@@ -333,7 +333,7 @@
         "category": "Structural",
         "avg_degree": 6.927504844408982,
         "rows": 17546,
-        "image": "/assets/repo_images/bodyy4.png"
+        "image": "/assets/repo_images/bodyy4.jpg"
     },
     {
         "problem": "bodyy5",
@@ -341,7 +341,7 @@
         "category": "Structural",
         "avg_degree": 6.931680025821723,
         "rows": 18589,
-        "image": "/assets/repo_images/bodyy5.png"
+        "image": "/assets/repo_images/bodyy5.jpg"
     },
     {
         "problem": "bodyy6",
@@ -349,7 +349,7 @@
         "category": "Structural",
         "avg_degree": 6.9300836517608175,
         "rows": 19366,
-        "image": "/assets/repo_images/bodyy6.png"
+        "image": "/assets/repo_images/bodyy6.jpg"
     },
     {
         "problem": "bone010",
@@ -357,7 +357,7 @@
         "category": "Model Reduction",
         "avg_degree": 48.496642860110896,
         "rows": 986703,
-        "image": "/assets/repo_images/bone010.png"
+        "image": "/assets/repo_images/bone010.jpg"
     },
     {
         "problem": "boneS01",
@@ -365,7 +365,7 @@
         "category": "Model Reduction",
         "avg_degree": 43.36133119537194,
         "rows": 127224,
-        "image": "/assets/repo_images/boneS01.png"
+        "image": "/assets/repo_images/boneS01.jpg"
     },
     {
         "problem": "boneS10",
@@ -373,7 +373,7 @@
         "category": "Model Reduction",
         "avg_degree": 44.68116445767725,
         "rows": 914898,
-        "image": "/assets/repo_images/boneS10.png"
+        "image": "/assets/repo_images/boneS10.jpg"
     },
     {
         "problem": "bundle1",
@@ -381,7 +381,7 @@
         "category": "Computer Vision",
         "avg_degree": 72.84859654096967,
         "rows": 10581,
-        "image": "/assets/repo_images/bundle1.png"
+        "image": "/assets/repo_images/bundle1.jpg"
     },
     {
         "problem": "bundle_adj",
@@ -389,7 +389,7 @@
         "category": "Computer Vision",
         "avg_degree": 39.36469783832115,
         "rows": 513351,
-        "image": "/assets/repo_images/bundle_adj.png"
+        "image": "/assets/repo_images/bundle_adj.jpg"
     },
     {
         "problem": "cant",
@@ -397,7 +397,7 @@
         "category": "2D/3D",
         "avg_degree": 64.16843605386623,
         "rows": 62451,
-        "image": "/assets/repo_images/cant.png"
+        "image": "/assets/repo_images/cant.jpg"
     },
     {
         "problem": "cbuckle",
@@ -405,7 +405,7 @@
         "category": "Structural",
         "avg_degree": 49.44923616694686,
         "rows": 13681,
-        "image": "/assets/repo_images/cbuckle.png"
+        "image": "/assets/repo_images/cbuckle.jpg"
     },
     {
         "problem": "cfd1",
@@ -413,7 +413,7 @@
         "category": "Computational Fluid Dynamics",
         "avg_degree": 25.837579257246375,
         "rows": 70656,
-        "image": "/assets/repo_images/cfd1.png"
+        "image": "/assets/repo_images/cfd1.jpg"
     },
     {
         "problem": "cfd2",
@@ -421,7 +421,7 @@
         "category": "Computational Fluid Dynamics",
         "avg_degree": 24.995187945560595,
         "rows": 123440,
-        "image": "/assets/repo_images/cfd2.png"
+        "image": "/assets/repo_images/cfd2.jpg"
     },
     {
         "problem": "consph",
@@ -429,7 +429,7 @@
         "category": "2D/3D",
         "avg_degree": 72.125182998536,
         "rows": 83334,
-        "image": "/assets/repo_images/consph.png"
+        "image": "/assets/repo_images/consph.jpg"
     },
     {
         "problem": "crankseg_1",
@@ -437,7 +437,7 @@
         "category": "Structural",
         "avg_degree": 201.0114764033028,
         "rows": 52804,
-        "image": "/assets/repo_images/crankseg_1.png"
+        "image": "/assets/repo_images/crankseg_1.jpg"
     },
     {
         "problem": "crankseg_2",
@@ -445,7 +445,7 @@
         "category": "Structural",
         "avg_degree": 221.63692471568658,
         "rows": 63838,
-        "image": "/assets/repo_images/crankseg_2.png"
+        "image": "/assets/repo_images/crankseg_2.jpg"
     },
     {
         "problem": "crystm02",
@@ -453,7 +453,7 @@
         "category": "Materials",
         "avg_degree": 23.122448979591837,
         "rows": 13965,
-        "image": "/assets/repo_images/crystm02.png"
+        "image": "/assets/repo_images/crystm02.jpg"
     },
     {
         "problem": "crystm03",
@@ -461,7 +461,7 @@
         "category": "Materials",
         "avg_degree": 23.638241010689992,
         "rows": 24696,
-        "image": "/assets/repo_images/crystm03.png"
+        "image": "/assets/repo_images/crystm03.jpg"
     },
     {
         "problem": "ct20stif",
@@ -469,7 +469,7 @@
         "category": "Structural",
         "avg_degree": 51.56725716142101,
         "rows": 52329,
-        "image": "/assets/repo_images/ct20stif.png"
+        "image": "/assets/repo_images/ct20stif.jpg"
     },
     {
         "problem": "cvxbqp1",
@@ -477,7 +477,7 @@
         "category": "Optimization",
         "avg_degree": 6.99936,
         "rows": 50000,
-        "image": "/assets/repo_images/cvxbqp1.png"
+        "image": "/assets/repo_images/cvxbqp1.jpg"
     },
     {
         "problem": "denormal",
@@ -485,7 +485,7 @@
         "category": "Pathological",
         "avg_degree": 12.933154362416108,
         "rows": 89400,
-        "image": "/assets/repo_images/denormal.png"
+        "image": "/assets/repo_images/denormal.jpg"
     },
     {
         "problem": "ecology2",
@@ -493,7 +493,7 @@
         "category": "2D/3D",
         "avg_degree": 4.995995995995996,
         "rows": 999999,
-        "image": "/assets/repo_images/ecology2.png"
+        "image": "/assets/repo_images/ecology2.jpg"
     },
     {
         "problem": "finan512",
@@ -501,7 +501,7 @@
         "category": "Economic",
         "avg_degree": 7.986301369863014,
         "rows": 74752,
-        "image": "/assets/repo_images/finan512.png"
+        "image": "/assets/repo_images/finan512.jpg"
     },
     {
         "problem": "gridgena",
@@ -509,7 +509,7 @@
         "category": "Optimization",
         "avg_degree": 10.458804787386136,
         "rows": 48962,
-        "image": "/assets/repo_images/gridgena.png"
+        "image": "/assets/repo_images/gridgena.jpg"
     },
     {
         "problem": "gyro",
@@ -517,7 +517,7 @@
         "category": "Model Reduction",
         "avg_degree": 58.819134842462994,
         "rows": 17361,
-        "image": "/assets/repo_images/gyro.png"
+        "image": "/assets/repo_images/gyro.jpg"
     },
     {
         "problem": "gyro_k",
@@ -525,7 +525,7 @@
         "category": "Model Reduction",
         "avg_degree": 58.819134842462994,
         "rows": 17361,
-        "image": "/assets/repo_images/gyro_k.png"
+        "image": "/assets/repo_images/gyro_k.jpg"
     },
     {
         "problem": "gyro_m",
@@ -533,7 +533,7 @@
         "category": "Model Reduction",
         "avg_degree": 19.608951097287022,
         "rows": 17361,
-        "image": "/assets/repo_images/gyro_m.png"
+        "image": "/assets/repo_images/gyro_m.jpg"
     },
     {
         "problem": "hood",
@@ -541,7 +541,7 @@
         "category": "Structural",
         "avg_degree": 44.868650869222186,
         "rows": 220542,
-        "image": "/assets/repo_images/hood.png"
+        "image": "/assets/repo_images/hood.jpg"
     },
     {
         "problem": "inline_1",
@@ -549,7 +549,7 @@
         "category": "Structural",
         "avg_degree": 73.0897219045804,
         "rows": 503712,
-        "image": "/assets/repo_images/inline_1.png"
+        "image": "/assets/repo_images/inline_1.jpg"
     },
     {
         "problem": "jnlbrng1",
@@ -557,7 +557,7 @@
         "category": "Optimization",
         "avg_degree": 4.98,
         "rows": 40000,
-        "image": "/assets/repo_images/jnlbrng1.png"
+        "image": "/assets/repo_images/jnlbrng1.jpg"
     },
     {
         "problem": "ldoor",
@@ -565,7 +565,7 @@
         "category": "Structural",
         "avg_degree": 44.6268463762454,
         "rows": 952203,
-        "image": "/assets/repo_images/ldoor.png"
+        "image": "/assets/repo_images/ldoor.jpg"
     },
     {
         "problem": "m_t1",
@@ -573,7 +573,7 @@
         "category": "Structural",
         "avg_degree": 99.95665006456373,
         "rows": 97578,
-        "image": "/assets/repo_images/m_t1.png"
+        "image": "/assets/repo_images/m_t1.jpg"
     },
     {
         "problem": "minsurfo",
@@ -581,7 +581,7 @@
         "category": "Optimization",
         "avg_degree": 4.990001470372004,
         "rows": 40806,
-        "image": "/assets/repo_images/minsurfo.png"
+        "image": "/assets/repo_images/minsurfo.jpg"
     },
     {
         "problem": "msc10848",
@@ -589,7 +589,7 @@
         "category": "Structural",
         "avg_degree": 113.36430678466077,
         "rows": 10848,
-        "image": "/assets/repo_images/msc10848.png"
+        "image": "/assets/repo_images/msc10848.jpg"
     },
     {
         "problem": "msc23052",
@@ -597,7 +597,7 @@
         "category": "Structural",
         "avg_degree": 49.56992885649835,
         "rows": 23052,
-        "image": "/assets/repo_images/msc23052.png"
+        "image": "/assets/repo_images/msc23052.jpg"
     },
     {
         "problem": "msdoor",
@@ -605,7 +605,7 @@
         "category": "Structural",
         "avg_degree": 46.10451759353441,
         "rows": 415863,
-        "image": "/assets/repo_images/msdoor.png"
+        "image": "/assets/repo_images/msdoor.jpg"
     },
     {
         "problem": "nasasrb",
@@ -613,7 +613,7 @@
         "category": "Structural",
         "avg_degree": 48.79394933479133,
         "rows": 54870,
-        "image": "/assets/repo_images/nasasrb.png"
+        "image": "/assets/repo_images/nasasrb.jpg"
     },
     {
         "problem": "nd12k",
@@ -621,7 +621,7 @@
         "category": "2D/3D",
         "avg_degree": 395.02627777777775,
         "rows": 36000,
-        "image": "/assets/repo_images/nd12k.png"
+        "image": "/assets/repo_images/nd12k.jpg"
     },
     {
         "problem": "nd24k",
@@ -629,7 +629,7 @@
         "category": "2D/3D",
         "avg_degree": 398.82825,
         "rows": 72000,
-        "image": "/assets/repo_images/nd24k.png"
+        "image": "/assets/repo_images/nd24k.jpg"
     },
     {
         "problem": "nd6k",
@@ -637,7 +637,7 @@
         "category": "2D/3D",
         "avg_degree": 383.1842222222222,
         "rows": 18000,
-        "image": "/assets/repo_images/nd6k.png"
+        "image": "/assets/repo_images/nd6k.jpg"
     },
     {
         "problem": "obstclae",
@@ -645,7 +645,7 @@
         "category": "Optimization",
         "avg_degree": 4.9402,
         "rows": 40000,
-        "image": "/assets/repo_images/obstclae.png"
+        "image": "/assets/repo_images/obstclae.jpg"
     },
     {
         "problem": "offshore",
@@ -653,7 +653,7 @@
         "category": "Electromagnetics",
         "avg_degree": 16.331226495348147,
         "rows": 259789,
-        "image": "/assets/repo_images/offshore.png"
+        "image": "/assets/repo_images/offshore.jpg"
     },
     {
         "problem": "oilpan",
@@ -661,7 +661,7 @@
         "category": "Structural",
         "avg_degree": 29.132199804751057,
         "rows": 73752,
-        "image": "/assets/repo_images/oilpan.png"
+        "image": "/assets/repo_images/oilpan.jpg"
     },
     {
         "problem": "olafu",
@@ -669,7 +669,7 @@
         "category": "Structural",
         "avg_degree": 62.87352904744209,
         "rows": 16146,
-        "image": "/assets/repo_images/olafu.png"
+        "image": "/assets/repo_images/olafu.jpg"
     },
     {
         "problem": "parabolic_fem",
@@ -677,7 +677,7 @@
         "category": "Computational Fluid Dynamics",
         "avg_degree": 6.988304093567251,
         "rows": 525825,
-        "image": "/assets/repo_images/parabolic_fem.png"
+        "image": "/assets/repo_images/parabolic_fem.jpg"
     },
     {
         "problem": "pdb1HYS",
@@ -685,7 +685,7 @@
         "category": "Protein Data",
         "avg_degree": 116.5599857209545,
         "rows": 36417,
-        "image": "/assets/repo_images/pdb1HYS.png"
+        "image": "/assets/repo_images/pdb1HYS.jpg"
     },
     {
         "problem": "pwtk",
@@ -693,7 +693,7 @@
         "category": "Structural",
         "avg_degree": 52.884259216769614,
         "rows": 217918,
-        "image": "/assets/repo_images/pwtk.png"
+        "image": "/assets/repo_images/pwtk.jpg"
     },
     {
         "problem": "qa8fm",
@@ -701,7 +701,7 @@
         "category": "Acoustics",
         "avg_degree": 25.111966367746913,
         "rows": 66127,
-        "image": "/assets/repo_images/qa8fm.png"
+        "image": "/assets/repo_images/qa8fm.jpg"
     },
     {
         "problem": "raefsky4",
@@ -709,7 +709,7 @@
         "category": "Structural",
         "avg_degree": 66.57510490924719,
         "rows": 19779,
-        "image": "/assets/repo_images/raefsky4.png"
+        "image": "/assets/repo_images/raefsky4.jpg"
     },
     {
         "problem": "s3dkq4m2",
@@ -717,7 +717,7 @@
         "category": "Structural",
         "avg_degree": 48.952724739908675,
         "rows": 90449,
-        "image": "/assets/repo_images/s3dkq4m2.png"
+        "image": "/assets/repo_images/s3dkq4m2.jpg"
     },
     {
         "problem": "s3dkt3m2",
@@ -725,7 +725,7 @@
         "category": "Structural",
         "avg_degree": 40.75471260047098,
         "rows": 90449,
-        "image": "/assets/repo_images/s3dkt3m2.png"
+        "image": "/assets/repo_images/s3dkt3m2.jpg"
     },
     {
         "problem": "shallow_water1",
@@ -733,7 +733,7 @@
         "category": "Computational Fluid Dynamics",
         "avg_degree": 4.0,
         "rows": 81920,
-        "image": "/assets/repo_images/shallow_water1.png"
+        "image": "/assets/repo_images/shallow_water1.jpg"
     },
     {
         "problem": "shallow_water2",
@@ -741,7 +741,7 @@
         "category": "Computational Fluid Dynamics",
         "avg_degree": 4.0,
         "rows": 81920,
-        "image": "/assets/repo_images/shallow_water2.png"
+        "image": "/assets/repo_images/shallow_water2.jpg"
     },
     {
         "problem": "ship_001",
@@ -749,7 +749,7 @@
         "category": "Structural",
         "avg_degree": 111.58350515463917,
         "rows": 34920,
-        "image": "/assets/repo_images/ship_001.png"
+        "image": "/assets/repo_images/ship_001.jpg"
     },
     {
         "problem": "ship_003",
@@ -757,7 +757,7 @@
         "category": "Structural",
         "avg_degree": 31.02848974763407,
         "rows": 121728,
-        "image": "/assets/repo_images/ship_003.png"
+        "image": "/assets/repo_images/ship_003.jpg"
     },
     {
         "problem": "shipsec1",
@@ -765,7 +765,7 @@
         "category": "Structural",
         "avg_degree": 25.32884705481494,
         "rows": 140874,
-        "image": "/assets/repo_images/shipsec1.png"
+        "image": "/assets/repo_images/shipsec1.jpg"
     },
     {
         "problem": "shipsec5",
@@ -773,7 +773,7 @@
         "category": "Structural",
         "avg_degree": 25.567685977982876,
         "rows": 179860,
-        "image": "/assets/repo_images/shipsec5.png"
+        "image": "/assets/repo_images/shipsec5.jpg"
     },
     {
         "problem": "shipsec8",
@@ -781,7 +781,7 @@
         "category": "Structural",
         "avg_degree": 28.746795569052985,
         "rows": 114919,
-        "image": "/assets/repo_images/shipsec8.png"
+        "image": "/assets/repo_images/shipsec8.jpg"
     },
     {
         "problem": "smt",
@@ -789,7 +789,7 @@
         "category": "Structural",
         "avg_degree": 145.84138467522365,
         "rows": 25710,
-        "image": "/assets/repo_images/smt.png"
+        "image": "/assets/repo_images/smt.jpg"
     },
     {
         "problem": "t2dah_e",
@@ -797,7 +797,7 @@
         "category": "Model Reduction",
         "avg_degree": 15.388117081695063,
         "rows": 11445,
-        "image": "/assets/repo_images/t2dah_e.png"
+        "image": "/assets/repo_images/t2dah_e.jpg"
     },
     {
         "problem": "ted_B",
@@ -805,7 +805,7 @@
         "category": "Thermal",
         "avg_degree": 13.633097595473833,
         "rows": 10605,
-        "image": "/assets/repo_images/ted_B.png"
+        "image": "/assets/repo_images/ted_B.jpg"
     },
     {
         "problem": "thermal1",
@@ -813,7 +813,7 @@
         "category": "Thermal",
         "avg_degree": 6.950153652575798,
         "rows": 82654,
-        "image": "/assets/repo_images/thermal1.png"
+        "image": "/assets/repo_images/thermal1.jpg"
     },
     {
         "problem": "thermal2",
@@ -821,7 +821,7 @@
         "category": "Thermal",
         "avg_degree": 6.986969532875424,
         "rows": 1228045,
-        "image": "/assets/repo_images/thermal2.png"
+        "image": "/assets/repo_images/thermal2.jpg"
     },
     {
         "problem": "thermomech_TC",
@@ -829,7 +829,7 @@
         "category": "Thermal",
         "avg_degree": 6.965269484523973,
         "rows": 102158,
-        "image": "/assets/repo_images/thermomech_TC.png"
+        "image": "/assets/repo_images/thermomech_TC.jpg"
     },
     {
         "problem": "thermomech_TK",
@@ -837,7 +837,7 @@
         "category": "Thermal",
         "avg_degree": 6.965269484523973,
         "rows": 102158,
-        "image": "/assets/repo_images/thermomech_TK.png"
+        "image": "/assets/repo_images/thermomech_TK.jpg"
     },
     {
         "problem": "thermomech_dM",
@@ -845,7 +845,7 @@
         "category": "Thermal",
         "avg_degree": 6.965269484523973,
         "rows": 204316,
-        "image": "/assets/repo_images/thermomech_dM.png"
+        "image": "/assets/repo_images/thermomech_dM.jpg"
     },
     {
         "problem": "thread",
@@ -853,7 +853,7 @@
         "category": "Structural",
         "avg_degree": 149.47807371536186,
         "rows": 29736,
-        "image": "/assets/repo_images/thread.png"
+        "image": "/assets/repo_images/thread.jpg"
     },
     {
         "problem": "tmt_sym",
@@ -861,7 +861,7 @@
         "category": "Electromagnetics",
         "avg_degree": 6.991702363931841,
         "rows": 726713,
-        "image": "/assets/repo_images/tmt_sym.png"
+        "image": "/assets/repo_images/tmt_sym.jpg"
     },
     {
         "problem": "vanbody",
@@ -869,7 +869,7 @@
         "category": "Structural",
         "avg_degree": 49.478585995921144,
         "rows": 47072,
-        "image": "/assets/repo_images/vanbody.png"
+        "image": "/assets/repo_images/vanbody.jpg"
     },
     {
         "problem": "wathen100",
@@ -877,7 +877,7 @@
         "category": "2D/3D",
         "avg_degree": 15.512680503930792,
         "rows": 30401,
-        "image": "/assets/repo_images/wathen100.png"
+        "image": "/assets/repo_images/wathen100.jpg"
     },
     {
         "problem": "wathen120",
@@ -885,7 +885,7 @@
         "category": "2D/3D",
         "avg_degree": 15.52539721741994,
         "rows": 36441,
-        "image": "/assets/repo_images/wathen120.png"
+        "image": "/assets/repo_images/wathen120.jpg"
     },
     {
         "problem": "x104",
@@ -893,6 +893,6 @@
         "category": "Structural",
         "avg_degree": 80.39564880425155,
         "rows": 108384,
-        "image": "/assets/repo_images/x104.png"
+        "image": "/assets/repo_images/x104.jpg"
     }
 ]
